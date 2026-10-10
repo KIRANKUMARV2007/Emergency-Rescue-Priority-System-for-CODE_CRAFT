@@ -70,7 +70,6 @@ int main() {
         strcpy(r[i].status, "Pending");
     }
 
-    /* Sort requests by priority */
     for (i = 0; i < count - 1; i++) {
         for (j = 0; j < count - i - 1; j++) {
             if (r[j].priority > r[j + 1].priority) {
@@ -94,7 +93,6 @@ int main() {
         printf("Status: %s\n", r[i].status);
     }
 
-    /* Assign rescue team */
     printf("\nEnter Request ID to assign a team: ");
     scanf("%19s", searchID);
 
@@ -115,7 +113,6 @@ int main() {
         printf("Request ID not found!\n");
     }
 
-    /* Update status */
     printf("\nEnter Request ID to update status: ");
     scanf("%19s", searchID);
 
@@ -154,7 +151,7 @@ int main() {
         printf("Request ID not found!\n");
     }
 
-    /* Search request */
+ 
     printf("\nEnter Request ID to search: ");
     scanf("%19s", searchID);
 
@@ -211,7 +208,7 @@ int main() {
         printf("Resolved: %d\n", resolved);
     }
 
-    /* Save final updated data */
+
     fp = fopen("rescue.txt", "w");
 
     if (fp == NULL) {
